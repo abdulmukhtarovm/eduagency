@@ -1,8 +1,10 @@
 import { LANGUAGE } from "../tools/constants";
 // import { en } from "./EN";
-import { ru } from "./EN";
+import { en } from "./EN";
 import { uz } from "./UZ";
 import { tr } from "./TR";
+
+import 'swiper/css';
 
 export const getLanguage = () => {
     return localStorage.getItem(LANGUAGE);

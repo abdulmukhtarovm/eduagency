@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { getLanguage, getText } from '../locales/index'
 import { LANGUAGE } from '../tools/constants';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false)
@@ -50,23 +51,23 @@ const Navbar = () => {
                     <a onClick={() => setBurger(!burger)} href="/">{getText("home")}</a>
                   </li>
                   <li>
-                    <a onClick={() => setBurger(!burger)} href="#about">{getText("aboutUs")}</a>
+                    <Link onClick={() => setBurger(!burger)} to="#services">{getText("aboutUs")}</Link>
                   </li>
                   <li>
-                    <a onClick={() => setBurger(!burger)} href="#function">{getText("functions")}</a>
+                    <a onClick={() => setBurger(!burger)} href="#services">Bizim hizmetler</a>
                   </li>
              
                   <li>
                     <a onClick={() => setBurger(!burger)} href="#contacts">{getText("contacts")}</a>
                   </li>
   
-                  <li>
+                  {/* <li>
                     <select  className='siteLang' onChange={changeLanguage}>
                     <option value="uz" selected={getLanguage() === "uz"} >UZ</option>
                     <option value="en" selected={getLanguage() === "en"} >EN</option>
                     <option value="tr" selected={getLanguage() === "tr"} >TR</option>
                   </select>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
   
